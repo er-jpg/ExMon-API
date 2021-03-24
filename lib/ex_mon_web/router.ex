@@ -30,6 +30,9 @@ defmodule ExMonWeb.Router do
     get "/", WelcomeController, :index
     resources "/trainer", TrainerController, only: [:create, :show, :delete, :update]
 
+    resources "/trainer_pokemon", TrainerPokemonController,
+      only: [:create, :show, :delete, :update]
+
     get "/pokemon/:name", PokemonController, :show
   end
 end
